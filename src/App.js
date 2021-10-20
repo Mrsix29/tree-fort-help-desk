@@ -9,12 +9,9 @@ function App() {
         <p>World is kinda meh.</p>
         <p>How are you?</p>
         <p>Benedict was here</p>
-
         <p>Another attempt from Benedict</p>
-
         <p>Zong was here</p>
         <p>Zong was here again</p>
-
       </div>
     </div>
   );
