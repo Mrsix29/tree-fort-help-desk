@@ -1,0 +1,24 @@
+.supportRequestContainer {
+    max-width: var(--default-container-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.supportRequestContainer > h1 {
+    text-align: center;
+    color: var(--dark-grey);
+}
+
+.contactContainer {
+    display: flex;
+}
+
+.contactImage {
+    display: block;
+}
+
+.Banner {
+    background-blend-mode: overlay;
+    background-image:  url(https://secureservercdn.net/198.71.233.31/bgi.c7f.myftpupload.com/wp-content/uploads/2020/08/geometric-bg-overlay-01.jpg),linear-gradient(135deg,var(--ifm-color-primary-lighter) 0%,var(--ifm-color-primary-dark) 100%)!important;
+    margin: 0
+}

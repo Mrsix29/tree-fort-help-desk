@@ -1,0 +1,19 @@
+.searchInput {
+    width: 100%;
+    height: 3rem;
+    padding: 0.75rem 0.75rem 0.75rem 3rem;
+    border-radius: 0.5rem;
+    background-image: url(../../static/Assets/svg/search.svg);
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center left 1rem;
+    border: none;
+    outline: none;
+}
+
+
+@media(min-width: 1200px) {
+    .searchInput {
+        width: 30rem;
+    }
+}

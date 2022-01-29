@@ -1,0 +1,17 @@
+.resourcesContainer {
+    max-width: var(--default-container-width);
+    margin: 5rem auto;
+    padding: 1rem;
+}
+
+.loading {
+    max-width: var(--default-container-width);
+    margin: 0 auto;
+}
+
+.title {
+    margin: 4rem auto 1rem;
+    text-align: center;
+    color: var(--primary-grey);
+    font-weight: 600;
+}

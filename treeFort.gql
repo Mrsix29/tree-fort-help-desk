@@ -1,0 +1,63 @@
+type HelpDeskSections {
+    sectionName: String
+    sectionLogo: String
+    sectionLink: String
+    sectionDescription: String
+}
+
+type PopularItemType {
+    popularType: String
+    popularTypeLogo: String
+    popularUrls: [PopularUrls!] @relation
+}
+
+type PopularUrls {
+    url: String
+    urlName: String
+    popularItemType: PopularItemType!
+}
+
+type FAQType {
+    faqType: String
+    faqs: [FAQs!] @relation
+}
+
+type FAQs {
+    question: String
+    answer: String
+    faqType: FAQType!
+}
+
+type DocType {
+    docType: String
+    docLogo: String
+    urlLogo: String
+    docs: [Docs!] @relation
+}
+
+type Docs {
+    url: String
+    urlName: String
+    docType: DocType!
+}
+
+type ResourceType {
+    resourceType: String
+    resourceLogo: String
+    urlLogo: String
+    resources: [Resources!] @relation
+}
+
+type Resources {
+    url: String
+    urlName: String
+    resourceType: ResourceType!
+}
+
+type Query {
+    allHelpDeskSections: [HelpDeskSections!]!
+    allPopularItemType: [PopularItemType!]!
+    allFAQType: [FAQType!]!
+    allDocType: [DocType!]!
+    allResourceType: [ResourceType!]!
+}

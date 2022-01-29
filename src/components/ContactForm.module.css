@@ -1,0 +1,112 @@
+.container {
+  margin: 0 1rem;
+  padding: 3rem 0;
+}
+
+.imgCenter {
+  display: block;
+  margin: 1rem auto;
+  width: 50%;
+}
+
+.formHeader {
+  text-align: center;
+  color: var(--dark-grey);
+}
+
+.nameLabel label, .otherLabel label {
+  font-weight: 700;
+  color: var(--dark-grey);
+}
+
+.nameLabel input, .otherLabel input, textarea {
+  width: 100%;
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  border-radius: 5px;
+  padding: 0.8rem;
+  border: none;
+  background-color: var(--off-white);
+  outline: none;
+}
+
+textarea {
+  height: 150px;
+}
+
+.otherLabel input[type=submit] {
+  cursor: pointer;
+  width: 200px;
+  margin: auto;
+  line-height: 1;
+  margin-top: 1.25rem;
+  border-radius: 5px;
+  padding: 0.8rem;
+  border: none;
+  color: var(--off-white);
+  font-weight:700;
+  border: 0.15rem solid var(--ifm-color-primary-darkest);
+  background-color: var(--ifm-color-primary-darkest);
+  transition: all 0.5s;
+}
+
+.otherLabel input[type=submit]:hover {
+background-color: var(--ifm-color-primary-lightest);
+color: var(--ifm-color-primary-darkest);
+}
+
+@media(min-width: 750px) {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+  }
+
+  .contactImage {
+    width: 100%;
+  }
+
+  .contactImage img {
+    width: 70%;
+  }
+
+  .contactForm {
+    width: 70%;
+    margin: 0 1rem;
+  }
+
+  .formHeader {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+}
+
+@media(min-width: 1200px) {
+  .container {
+    margin: auto;
+    max-width: 1400px;
+  }
+
+  .contactImage img {
+    width: 50%;
+    padding: 0;
+  }
+
+  .contactForm {
+    width: 70%;
+    margin-right: 9rem;
+  }
+
+  .formHeader {
+    text-align: left;
+    margin-bottom: 1rem;
+  }
+  
+  .nameLabel {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+  }
+}

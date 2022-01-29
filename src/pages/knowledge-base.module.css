@@ -1,0 +1,10 @@
+.knowledgeBaseContainer {
+    max-width: var(--default-container-width);
+    margin: 5rem auto;
+    padding: 1rem;
+}
+
+.loading {
+    max-width: var(--default-container-width);
+    margin: 0 auto;
+}

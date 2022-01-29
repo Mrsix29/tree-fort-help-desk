@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
-## Available Scripts
 
-In the project directory, you can run:
+###  Includes The Following Modules
 
-### `yarn start`
+1. react-router-dom
+2. netlify-cli
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Environment Variables
 
-### `yarn test`
+1. Fauna Secret Key
+2. Algolia Application ID
+3. Algolia API Key
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+###  Available Scripts
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the project directory, you can run: `netlify dev` to test project in dev environment.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To create a production bundle of your app run: `netlify build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### Pre flight checklist.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Check You Have Netlify CLI Installed Globally  
+To check to see if the netlify cli package is installed run  ```npm list -g```. If you do not see netlify cli in the list the you will need to install them before proceeding. Install the netlify cli using ```npm install netlify-cli -g```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Initialize React to use a Netlify CLI
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To setup your project folder to use Netlify CLI, add a netlify.toml file to your root directory and add:
+```
+[build]
+    functions = "functions"
+```
+Then create a functions folder in your root directory to place all your server-less functions.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Add Algolia Search
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To add algolia search to this site, go to [Docsearch](https://docsearch.algolia.com/). You can either apply for the functionality if you meet all the requirements or you can run your own algolia search which is explained [here](https://docsearch.algolia.com/docs/legacy/run-your-own/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Fauna DB
 
-### Analyzing the Bundle Size
+This project stores some of its data using fauna db. To get started with faunadb, create an account. In this account add a new database then upload a graphql schema to the database. Using graphql queries, you can create read update and delete data from your project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+In the security section, you can create a new secret key which will connect your database to your project.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Connect Fauna DB to Netlify
+You need to associate your fauna db with a your netlify account. To do this, you need to:
+1. Sign into your Netlify account.
+2. Go to your project folder.
+3. Select "Site Settings" from the top navigation.
+4. Open "Build & Deploy" from the side navigation, then select "Environment".
+5. Add FAUNA_SECRET_KEY as a new environment variable.
