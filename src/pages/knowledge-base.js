@@ -14,7 +14,7 @@ export default function KnowledgeBase() {
         <Layout
             title="Knowledge Base"
             description="">
-            <HomepageHeader title="Search our knowledge base" cssBackgroundClass="homePageBannerOther" />
+            <HomepageHeader title="Search our knowledge base here" cssBackgroundClass="homePageBannerOther" />
             <main>
                 <div className={styles.knowledgeBaseContainer}>
                     {error && <div className="center">{error}</div>}
