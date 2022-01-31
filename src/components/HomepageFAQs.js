@@ -1,44 +1,12 @@
-import React, {useEffect} from "react";
-import Amplify, { API, graphqlOperation } from "aws-amplify";
+import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import styles from './HomepageFAQs.module.css';
 import FAQPanels from "./FAQPanels";
 import SkeletonLoadingFAQ from './SkeletonLoadingFAQ';
-import getData from "./getData";
-import { listFAQTypes } from "../graphql/queries";
-import awsmobile from "../aws-exports";
-import { DataStore } from '@aws-amplify/datastore';
-import { FAQType, FAQ } from '../models';
-
-Amplify.configure(awsmobile);
+import getQueryData from "./getQueryData";
 
 const HomepageFAQs = () => {
-    useEffect(() => {
-        fetchFAQTypes();
-    }, [])
-    const fetchFAQTypes = async () => {
-        try {
-            const faqTypesData = await API.graphql(graphqlOperation(listFAQTypes));
-            const faqTypesList = faqTypesData.data.listFAQTypes.items;
-            console.log("faq Types", faqTypesList);
-        } catch (err) {
-            console.log("Could not fetch because", err);
-        }
-    }
-    // const newFAQ = await DataStore.save(
-    //     new FAQType({
-    //         faqType: "Support Request"
-    //     })
-    // );
-    
-    // await DataStore.save(
-    //     new FAQ({
-    //         question: "Loving Amplify DataStore!",
-    //         answer: "Loving Amplify DataStore!",
-    //         faqType: newFAQ
-    //     })
-    // );
-    const {data, isPending, error} = getData('/.netlify/functions/getFaqs');
+    const {data, isPending, error} = getQueryData("listFAQTypes");
     const loadingData = [1, 2, 3, 4, 5];
     const faqTypes = []
     const faqs = []
@@ -46,7 +14,7 @@ const HomepageFAQs = () => {
         faqTypes.push(faq.faqType)
     ))
     data.map((faq) => (
-        faqs.push(faq.faqs.data)
+        faqs.push(faq.faqs.items)
     ))
     return (
         <div className={styles.faqContainer}>

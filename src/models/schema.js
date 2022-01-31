@@ -14,7 +14,7 @@ export const schema = {
                     "name": "faqType",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "faqs": {
@@ -28,7 +28,7 @@ export const schema = {
                     "isArrayNullable": true,
                     "association": {
                         "connectionType": "HAS_MANY",
-                        "associatedWith": "faqTypeFaqsId"
+                        "associatedWith": "faqTypeID"
                     }
                 },
                 "createdAt": {
@@ -54,6 +54,22 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -67,30 +83,24 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "faqType": {
-                    "name": "faqType",
-                    "isArray": false,
-                    "type": {
-                        "model": "FAQType"
-                    },
-                    "isRequired": false,
-                    "attributes": [],
-                    "association": {
-                        "connectionType": "BELONGS_TO",
-                        "targetName": "faqTypeFaqsId"
-                    }
-                },
                 "question": {
                     "name": "question",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": true,
+                    "isRequired": false,
                     "attributes": []
                 },
                 "answer": {
                     "name": "answer",
                     "isArray": false,
                     "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "faqTypeID": {
+                    "name": "faqTypeID",
+                    "isArray": false,
+                    "type": "ID",
                     "isRequired": true,
                     "attributes": []
                 },
@@ -117,11 +127,36 @@ export const schema = {
                 {
                     "type": "model",
                     "properties": {}
+                },
+                {
+                    "type": "key",
+                    "properties": {
+                        "name": "byFAQType",
+                        "fields": [
+                            "faqTypeID"
+                        ]
+                    }
+                },
+                {
+                    "type": "auth",
+                    "properties": {
+                        "rules": [
+                            {
+                                "allow": "public",
+                                "operations": [
+                                    "create",
+                                    "update",
+                                    "delete",
+                                    "read"
+                                ]
+                            }
+                        ]
+                    }
                 }
             ]
         }
     },
     "enums": {},
     "nonModels": {},
-    "version": "10f5b6f3482576ed592e5c8b1a8bacc4"
+    "version": "5ea523b317aa81577345ed7e58bece5d"
 };

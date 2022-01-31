@@ -14,7 +14,7 @@ type FAQMetaData = {
 
 export declare class FAQType {
   readonly id: string;
-  readonly faqType: string;
+  readonly faqType?: string;
   readonly faqs?: (FAQ | null)[];
   readonly createdAt?: string;
   readonly updatedAt?: string;
@@ -24,9 +24,9 @@ export declare class FAQType {
 
 export declare class FAQ {
   readonly id: string;
-  readonly faqType?: FAQType;
-  readonly question: string;
-  readonly answer: string;
+  readonly question?: string;
+  readonly answer?: string;
+  readonly faqTypeID: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<FAQ, FAQMetaData>);

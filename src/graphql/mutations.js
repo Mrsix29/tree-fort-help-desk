@@ -14,14 +14,21 @@ export const createFAQType = /* GraphQL */ `
           id
           question
           answer
+          faqTypeID
           createdAt
           updatedAt
-          fAQTypeFaqsId
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -38,14 +45,21 @@ export const updateFAQType = /* GraphQL */ `
           id
           question
           answer
+          faqTypeID
           createdAt
           updatedAt
-          fAQTypeFaqsId
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -62,14 +76,21 @@ export const deleteFAQType = /* GraphQL */ `
           id
           question
           answer
+          faqTypeID
           createdAt
           updatedAt
-          fAQTypeFaqsId
+          _version
+          _deleted
+          _lastChangedAt
         }
         nextToken
+        startedAt
       }
       createdAt
       updatedAt
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -80,20 +101,14 @@ export const createFAQ = /* GraphQL */ `
   ) {
     createFAQ(input: $input, condition: $condition) {
       id
-      faqType {
-        id
-        faqType
-        faqs {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       question
       answer
+      faqTypeID
       createdAt
       updatedAt
-      fAQTypeFaqsId
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -104,20 +119,14 @@ export const updateFAQ = /* GraphQL */ `
   ) {
     updateFAQ(input: $input, condition: $condition) {
       id
-      faqType {
-        id
-        faqType
-        faqs {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       question
       answer
+      faqTypeID
       createdAt
       updatedAt
-      fAQTypeFaqsId
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
@@ -128,20 +137,14 @@ export const deleteFAQ = /* GraphQL */ `
   ) {
     deleteFAQ(input: $input, condition: $condition) {
       id
-      faqType {
-        id
-        faqType
-        faqs {
-          nextToken
-        }
-        createdAt
-        updatedAt
-      }
       question
       answer
+      faqTypeID
       createdAt
       updatedAt
-      fAQTypeFaqsId
+      _version
+      _deleted
+      _lastChangedAt
     }
   }
 `;
