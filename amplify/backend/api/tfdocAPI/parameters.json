@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "tfdocAPI",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2022-01-31T02:43:07.105Z"
+}

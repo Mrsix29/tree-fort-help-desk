@@ -1,0 +1,16 @@
+input AMPLIFY {
+  globalAuthRule: AuthRule = {allow: public}
+}
+
+type FAQType @model {
+  id: ID!
+  faqType: String!
+  faqs: [FAQ] @hasMany
+}
+
+type FAQ @model {
+  id: ID!
+  faqType: FAQType @belongsTo
+  question: String!
+  answer: String!
+}
