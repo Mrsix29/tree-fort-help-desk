@@ -141,13 +141,13 @@ video {
 
 /* BANNER STYLES */
 .homePageBanner {
-  background-image: url(../../static/Assets/svg/homePageBanner.svg);
+  background-image: url(../../static/assets/svg/homePageBanner.svg);
 }
 
 .homePageBannerOther {
-  background-image: url(../../static/Assets/svg/homePageBannerOther.svg);
+  background-image: url(../../static/assets/svg/homePageBannerOther.svg);
 }
 
 .resourcePageBanner {
-  background-image: url(../../static/Assets/svg/resourcePageBanner.svg);
+  background-image: url(../../static/assets/svg/resourcePageBanner.svg);
 }
