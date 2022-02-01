@@ -3,12 +3,12 @@ import Layout from '@theme/Layout';
 import styles from './resources.module.css'
 import HomepageHeader from '../components/HomepageHeader';
 import HomepageSupportRequest from '../components/HomepageSupportRequest';
-import getData from "../components/getData";
+import getQueryData from "../components/getQueryData";
 import ResourcesPanel from '../components/ResourcesPanel';
 import SkeletonLoadingDocs from '../components/SkeletonLoadingDocs';
 
 export default function Resources() {
-    const {data, isPending, error} = getData('/.netlify/functions/getresourcetypes');
+    const {data, isPending, error} = getQueryData("listResourceTypes");
     const loadingData = [1, 2];
     return (
         <Layout

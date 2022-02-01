@@ -17,7 +17,7 @@ export default function FAQs() {
                 <HomepageFAQs />
                     <div className={styles.additionalHelpGrid}>
                         <Link className={styles.forgotAccountInfo} to="/docs/account-setup-and-management/forgot-account-number-or-password/">
-                            <img src="/assets/svg/account-setup.svg" alt="Account Setup" />
+                            <img src="../../static/Assets/svg/account-setup.svg" alt="Account Setup" />
                             <h5>Forgot Account Number or Password</h5>
                         </Link>
                         <Link className={styles.verification} to="/docs/getting-started/the-id-verification-process">

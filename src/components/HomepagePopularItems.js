@@ -2,11 +2,11 @@ import React from "react";
 import styles from './HomepagePopularItems.module.css';
 import PopularItemsPanel from "./PopularItemsPanel";
 import SkeletonLoadingPopular from './SkeletonLoadingPopular';
-import getData from "./getData";
+import getQueryData from "./getQueryData";
 
 
 const HomepagePopularItems = () => {
-  const {data, isPending, error} = getData('/.netlify/functions/getpopularitems');
+  const {data, isPending, error} = getQueryData("listPopularItemTypes");
   const loadingData = [1, 2, 3];
   return (
     <div className={styles.popularBackground}>

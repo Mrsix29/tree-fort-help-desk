@@ -1,6 +1,186 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreateHelpDeskSection = /* GraphQL */ `
+  subscription OnCreateHelpDeskSection {
+    onCreateHelpDeskSection {
+      id
+      sectionName
+      sectionLogo
+      sectionLink
+      sectionDescription
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateHelpDeskSection = /* GraphQL */ `
+  subscription OnUpdateHelpDeskSection {
+    onUpdateHelpDeskSection {
+      id
+      sectionName
+      sectionLogo
+      sectionLink
+      sectionDescription
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteHelpDeskSection = /* GraphQL */ `
+  subscription OnDeleteHelpDeskSection {
+    onDeleteHelpDeskSection {
+      id
+      sectionName
+      sectionLogo
+      sectionLink
+      sectionDescription
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreatePopularItemType = /* GraphQL */ `
+  subscription OnCreatePopularItemType {
+    onCreatePopularItemType {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdatePopularItemType = /* GraphQL */ `
+  subscription OnUpdatePopularItemType {
+    onUpdatePopularItemType {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeletePopularItemType = /* GraphQL */ `
+  subscription OnDeletePopularItemType {
+    onDeletePopularItemType {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreatePopularUrl = /* GraphQL */ `
+  subscription OnCreatePopularUrl {
+    onCreatePopularUrl {
+      id
+      url
+      urlName
+      popularItemTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdatePopularUrl = /* GraphQL */ `
+  subscription OnUpdatePopularUrl {
+    onUpdatePopularUrl {
+      id
+      url
+      urlName
+      popularItemTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeletePopularUrl = /* GraphQL */ `
+  subscription OnDeletePopularUrl {
+    onDeletePopularUrl {
+      id
+      url
+      urlName
+      popularItemTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const onCreateFAQType = /* GraphQL */ `
   subscription OnCreateFAQType {
     onCreateFAQType {
@@ -122,6 +302,276 @@ export const onDeleteFAQ = /* GraphQL */ `
       question
       answer
       faqTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateDocType = /* GraphQL */ `
+  subscription OnCreateDocType {
+    onCreateDocType {
+      id
+      docType
+      docLogo
+      urlLogo
+      docs {
+        items {
+          id
+          url
+          urlName
+          docTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateDocType = /* GraphQL */ `
+  subscription OnUpdateDocType {
+    onUpdateDocType {
+      id
+      docType
+      docLogo
+      urlLogo
+      docs {
+        items {
+          id
+          url
+          urlName
+          docTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteDocType = /* GraphQL */ `
+  subscription OnDeleteDocType {
+    onDeleteDocType {
+      id
+      docType
+      docLogo
+      urlLogo
+      docs {
+        items {
+          id
+          url
+          urlName
+          docTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateDoc = /* GraphQL */ `
+  subscription OnCreateDoc {
+    onCreateDoc {
+      id
+      url
+      urlName
+      docTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateDoc = /* GraphQL */ `
+  subscription OnUpdateDoc {
+    onUpdateDoc {
+      id
+      url
+      urlName
+      docTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteDoc = /* GraphQL */ `
+  subscription OnDeleteDoc {
+    onDeleteDoc {
+      id
+      url
+      urlName
+      docTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateResourceType = /* GraphQL */ `
+  subscription OnCreateResourceType {
+    onCreateResourceType {
+      id
+      resourceType
+      resourceLogo
+      urlLogo
+      resources {
+        items {
+          id
+          url
+          urlName
+          resourceTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateResourceType = /* GraphQL */ `
+  subscription OnUpdateResourceType {
+    onUpdateResourceType {
+      id
+      resourceType
+      resourceLogo
+      urlLogo
+      resources {
+        items {
+          id
+          url
+          urlName
+          resourceTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteResourceType = /* GraphQL */ `
+  subscription OnDeleteResourceType {
+    onDeleteResourceType {
+      id
+      resourceType
+      resourceLogo
+      urlLogo
+      resources {
+        items {
+          id
+          url
+          urlName
+          resourceTypeID
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateResource = /* GraphQL */ `
+  subscription OnCreateResource {
+    onCreateResource {
+      id
+      url
+      urlName
+      resourceTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateResource = /* GraphQL */ `
+  subscription OnUpdateResource {
+    onUpdateResource {
+      id
+      url
+      urlName
+      resourceTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteResource = /* GraphQL */ `
+  subscription OnDeleteResource {
+    onDeleteResource {
+      id
+      url
+      urlName
+      resourceTypeID
       createdAt
       updatedAt
       _version

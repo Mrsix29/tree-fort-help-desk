@@ -4,9 +4,16 @@ import { schema } from './schema';
 
 
 
-const { FAQType, FAQ } = initSchema(schema);
+const { HelpDeskSection, PopularItemType, PopularUrl, FAQType, FAQ, DocType, Doc, ResourceType, Resource } = initSchema(schema);
 
 export {
+  HelpDeskSection,
+  PopularItemType,
+  PopularUrl,
   FAQType,
-  FAQ
+  FAQ,
+  DocType,
+  Doc,
+  ResourceType,
+  Resource
 };

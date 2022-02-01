@@ -6,7 +6,7 @@ const DocumentationsPanel = ({ helpDeskSections }) => {
     return (
         <div className={styles.documentGrid}>
             {helpDeskSections.map((helpDeskSection) => (
-                <div className={styles.documentContainer} key={helpDeskSection._id}>
+                <div className={styles.documentContainer} key={helpDeskSection.id}>
                     {helpDeskSection.sectionName == "Developer API" ? (
                         <a className={styles.documentHeader} href={helpDeskSection.sectionLink} target="_blank">
                             <span className={styles.documentLogo}><img src={`/assets/svg/${helpDeskSection.sectionLogo}`} alt={helpDeskSection.sectionName}/></span>

@@ -19,7 +19,7 @@ const FAQPanels = ({faqs}) => {
         <div>
             {faqs.map((faq) => (
                 <div className={styles.faqItemContainer} key={faq.id}>
-                    <Collapsible className={styles.faqItemQuestion} trigger={[<span>{faq.question}</span>, <span><BsChevronDown size="18px" /></span>]}>
+                    <Collapsible className={styles.faqItemQuestion} trigger={[<span key="0">{faq.question}</span>, <span key="1"><BsChevronDown size="18px" /></span>]}>
                         <Linkify componentDecorator={componentDecorator}>
                             <p className={styles.faqItemAnswer}>{faq.answer}</p>
                         </Linkify>                        
