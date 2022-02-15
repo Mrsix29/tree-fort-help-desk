@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './ContactForm.module.css'
 import Amplify, { API, graphqlOperation } from "aws-amplify";
 import awsmobile from "../aws-exports";
-import {createSupportRequestForm} from '../graphql/mutations';
+import {createSupportRequestForm, updateSupportRequestForm} from '../graphql/mutations';
 
 Amplify.configure(awsmobile);
 
@@ -15,7 +15,7 @@ const submitContactForm = async () => {
     message: formState.message,
     attachment: formState.attachment
   };
-  
+
   await API.graphql(graphqlOperation(createSupportRequestForm, {input: formData}))
   alert('Mail Sent');
 }
