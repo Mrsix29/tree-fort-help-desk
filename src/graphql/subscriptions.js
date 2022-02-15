@@ -181,6 +181,147 @@ export const onDeletePopularUrl = /* GraphQL */ `
     }
   }
 `;
+export const onCreateTestPopularItemType = /* GraphQL */ `
+  subscription OnCreateTestPopularItemType {
+    onCreateTestPopularItemType {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          type
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateTestPopularItemType = /* GraphQL */ `
+  subscription OnUpdateTestPopularItemType {
+    onUpdateTestPopularItemType {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          type
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteTestPopularItemType = /* GraphQL */ `
+  subscription OnDeleteTestPopularItemType {
+    onDeleteTestPopularItemType {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          type
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateTestPopularUrl = /* GraphQL */ `
+  subscription OnCreateTestPopularUrl {
+    onCreateTestPopularUrl {
+      id
+      url
+      urlName
+      popularItemTypeID
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateTestPopularUrl = /* GraphQL */ `
+  subscription OnUpdateTestPopularUrl {
+    onUpdateTestPopularUrl {
+      id
+      url
+      urlName
+      popularItemTypeID
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteTestPopularUrl = /* GraphQL */ `
+  subscription OnDeleteTestPopularUrl {
+    onDeleteTestPopularUrl {
+      id
+      url
+      urlName
+      popularItemTypeID
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const onCreateFAQType = /* GraphQL */ `
   subscription OnCreateFAQType {
     onCreateFAQType {
@@ -572,6 +713,60 @@ export const onDeleteResource = /* GraphQL */ `
       url
       urlName
       resourceTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onCreateSupportRequestForm = /* GraphQL */ `
+  subscription OnCreateSupportRequestForm {
+    onCreateSupportRequestForm {
+      id
+      lname
+      fname
+      email
+      phone
+      message
+      attachment
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onUpdateSupportRequestForm = /* GraphQL */ `
+  subscription OnUpdateSupportRequestForm {
+    onUpdateSupportRequestForm {
+      id
+      lname
+      fname
+      email
+      phone
+      message
+      attachment
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const onDeleteSupportRequestForm = /* GraphQL */ `
+  subscription OnDeleteSupportRequestForm {
+    onDeleteSupportRequestForm {
+      id
+      lname
+      fname
+      email
+      phone
+      message
+      attachment
       createdAt
       updatedAt
       _version

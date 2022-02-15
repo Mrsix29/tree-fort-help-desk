@@ -8,8 +8,9 @@
           "defaultAuthentication": {
             "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 30,
-              "description": "api key description"
+              "apiKeyExpirationDays": 180,
+              "apiKeyExpirationDate": "2022-08-09T05:09:47.224Z",
+              "description": "tree fort api"
             }
           },
           "additionalAuthenticationProviders": [
@@ -19,6 +20,12 @@
           ]
         }
       }
+    }
+  },
+  "storage": {
+    "supportContactForm": {
+      "service": "DynamoDB",
+      "providerPlugin": "awscloudformation"
     }
   }
 }

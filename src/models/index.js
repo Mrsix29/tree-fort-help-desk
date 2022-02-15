@@ -4,12 +4,14 @@ import { schema } from './schema';
 
 
 
-const { HelpDeskSection, PopularItemType, PopularUrl, FAQType, FAQ, DocType, Doc, ResourceType, Resource } = initSchema(schema);
+const { HelpDeskSection, PopularItemType, PopularUrl, TestPopularItemType, TestPopularUrl, FAQType, FAQ, DocType, Doc, ResourceType, Resource } = initSchema(schema);
 
 export {
   HelpDeskSection,
   PopularItemType,
   PopularUrl,
+  TestPopularItemType,
+  TestPopularUrl,
   FAQType,
   FAQ,
   DocType,

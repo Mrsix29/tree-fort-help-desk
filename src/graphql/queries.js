@@ -233,6 +233,242 @@ export const syncPopularUrls = /* GraphQL */ `
     }
   }
 `;
+export const getTestPopularItemType = /* GraphQL */ `
+  query GetTestPopularItemType($id: ID!) {
+    getTestPopularItemType(id: $id) {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          type
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listTestPopularItemTypes = /* GraphQL */ `
+  query ListTestPopularItemTypes(
+    $filter: ModelTestPopularItemTypeFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listTestPopularItemTypes(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        popularType
+        popularTypeLogo
+        popularUrls {
+          nextToken
+          startedAt
+        }
+        type
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncTestPopularItemTypes = /* GraphQL */ `
+  query SyncTestPopularItemTypes(
+    $filter: ModelTestPopularItemTypeFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncTestPopularItemTypes(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        popularType
+        popularTypeLogo
+        popularUrls {
+          nextToken
+          startedAt
+        }
+        type
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const testPopularItemTypesByDate = /* GraphQL */ `
+  query TestPopularItemTypesByDate(
+    $type: String!
+    $createdAt: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelTestPopularItemTypeFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    testPopularItemTypesByDate(
+      type: $type
+      createdAt: $createdAt
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        popularType
+        popularTypeLogo
+        popularUrls {
+          nextToken
+          startedAt
+        }
+        type
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getTestPopularUrl = /* GraphQL */ `
+  query GetTestPopularUrl($id: ID!) {
+    getTestPopularUrl(id: $id) {
+      id
+      url
+      urlName
+      popularItemTypeID
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listTestPopularUrls = /* GraphQL */ `
+  query ListTestPopularUrls(
+    $filter: ModelTestPopularUrlFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listTestPopularUrls(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        url
+        urlName
+        popularItemTypeID
+        type
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncTestPopularUrls = /* GraphQL */ `
+  query SyncTestPopularUrls(
+    $filter: ModelTestPopularUrlFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncTestPopularUrls(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        url
+        urlName
+        popularItemTypeID
+        type
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const testPopularUrlsByDate = /* GraphQL */ `
+  query TestPopularUrlsByDate(
+    $type: String!
+    $createdAt: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelTestPopularUrlFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    testPopularUrlsByDate(
+      type: $type
+      createdAt: $createdAt
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        url
+        urlName
+        popularItemTypeID
+        type
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
 export const getFAQType = /* GraphQL */ `
   query GetFAQType($id: ID!) {
     getFAQType(id: $id) {
@@ -687,6 +923,86 @@ export const syncResources = /* GraphQL */ `
         url
         urlName
         resourceTypeID
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getSupportRequestForm = /* GraphQL */ `
+  query GetSupportRequestForm($id: ID!) {
+    getSupportRequestForm(id: $id) {
+      id
+      lname
+      fname
+      email
+      phone
+      message
+      attachment
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const listSupportRequestForms = /* GraphQL */ `
+  query ListSupportRequestForms(
+    $filter: ModelSupportRequestFormFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listSupportRequestForms(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        lname
+        fname
+        email
+        phone
+        message
+        attachment
+        createdAt
+        updatedAt
+        _version
+        _deleted
+        _lastChangedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const syncSupportRequestForms = /* GraphQL */ `
+  query SyncSupportRequestForms(
+    $filter: ModelSupportRequestFormFilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncSupportRequestForms(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        lname
+        fname
+        email
+        phone
+        message
+        attachment
         createdAt
         updatedAt
         _version

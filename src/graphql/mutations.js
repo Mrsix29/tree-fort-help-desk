@@ -208,6 +208,165 @@ export const deletePopularUrl = /* GraphQL */ `
     }
   }
 `;
+export const createTestPopularItemType = /* GraphQL */ `
+  mutation CreateTestPopularItemType(
+    $input: CreateTestPopularItemTypeInput!
+    $condition: ModelTestPopularItemTypeConditionInput
+  ) {
+    createTestPopularItemType(input: $input, condition: $condition) {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          type
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateTestPopularItemType = /* GraphQL */ `
+  mutation UpdateTestPopularItemType(
+    $input: UpdateTestPopularItemTypeInput!
+    $condition: ModelTestPopularItemTypeConditionInput
+  ) {
+    updateTestPopularItemType(input: $input, condition: $condition) {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          type
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteTestPopularItemType = /* GraphQL */ `
+  mutation DeleteTestPopularItemType(
+    $input: DeleteTestPopularItemTypeInput!
+    $condition: ModelTestPopularItemTypeConditionInput
+  ) {
+    deleteTestPopularItemType(input: $input, condition: $condition) {
+      id
+      popularType
+      popularTypeLogo
+      popularUrls {
+        items {
+          id
+          url
+          urlName
+          popularItemTypeID
+          type
+          createdAt
+          updatedAt
+          _version
+          _deleted
+          _lastChangedAt
+        }
+        nextToken
+        startedAt
+      }
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createTestPopularUrl = /* GraphQL */ `
+  mutation CreateTestPopularUrl(
+    $input: CreateTestPopularUrlInput!
+    $condition: ModelTestPopularUrlConditionInput
+  ) {
+    createTestPopularUrl(input: $input, condition: $condition) {
+      id
+      url
+      urlName
+      popularItemTypeID
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateTestPopularUrl = /* GraphQL */ `
+  mutation UpdateTestPopularUrl(
+    $input: UpdateTestPopularUrlInput!
+    $condition: ModelTestPopularUrlConditionInput
+  ) {
+    updateTestPopularUrl(input: $input, condition: $condition) {
+      id
+      url
+      urlName
+      popularItemTypeID
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteTestPopularUrl = /* GraphQL */ `
+  mutation DeleteTestPopularUrl(
+    $input: DeleteTestPopularUrlInput!
+    $condition: ModelTestPopularUrlConditionInput
+  ) {
+    deleteTestPopularUrl(input: $input, condition: $condition) {
+      id
+      url
+      urlName
+      popularItemTypeID
+      type
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
 export const createFAQType = /* GraphQL */ `
   mutation CreateFAQType(
     $input: CreateFAQTypeInput!
@@ -653,6 +812,69 @@ export const deleteResource = /* GraphQL */ `
       url
       urlName
       resourceTypeID
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const createSupportRequestForm = /* GraphQL */ `
+  mutation CreateSupportRequestForm(
+    $input: CreateSupportRequestFormInput!
+    $condition: ModelSupportRequestFormConditionInput
+  ) {
+    createSupportRequestForm(input: $input, condition: $condition) {
+      id
+      lname
+      fname
+      email
+      phone
+      message
+      attachment
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const updateSupportRequestForm = /* GraphQL */ `
+  mutation UpdateSupportRequestForm(
+    $input: UpdateSupportRequestFormInput!
+    $condition: ModelSupportRequestFormConditionInput
+  ) {
+    updateSupportRequestForm(input: $input, condition: $condition) {
+      id
+      lname
+      fname
+      email
+      phone
+      message
+      attachment
+      createdAt
+      updatedAt
+      _version
+      _deleted
+      _lastChangedAt
+    }
+  }
+`;
+export const deleteSupportRequestForm = /* GraphQL */ `
+  mutation DeleteSupportRequestForm(
+    $input: DeleteSupportRequestFormInput!
+    $condition: ModelSupportRequestFormConditionInput
+  ) {
+    deleteSupportRequestForm(input: $input, condition: $condition) {
+      id
+      lname
+      fname
+      email
+      phone
+      message
+      attachment
       createdAt
       updatedAt
       _version

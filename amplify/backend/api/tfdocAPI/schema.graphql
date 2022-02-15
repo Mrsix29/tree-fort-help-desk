@@ -62,3 +62,13 @@ type Resource @model @auth(rules: [{ allow: public }]) {
   urlName: String
   resourceTypeID: ID! @index(name: "byResourceType")
 }
+
+type SupportRequestForm @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  lname: String
+  fname: String
+  email: String
+  phone: String
+  message: String
+  attachment: String
+}
