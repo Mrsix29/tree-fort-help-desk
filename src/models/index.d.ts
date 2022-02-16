@@ -16,14 +16,6 @@ type PopularUrlMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-type TestPopularItemTypeMetaData = {
-  readOnlyFields: 'updatedAt';
-}
-
-type TestPopularUrlMetaData = {
-  readOnlyFields: 'updatedAt';
-}
-
 type FAQTypeMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
@@ -45,6 +37,10 @@ type ResourceTypeMetaData = {
 }
 
 type ResourceMetaData = {
+  readOnlyFields: 'createdAt' | 'updatedAt';
+}
+
+type SupportRequestFormMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
@@ -80,30 +76,6 @@ export declare class PopularUrl {
   readonly updatedAt?: string;
   constructor(init: ModelInit<PopularUrl, PopularUrlMetaData>);
   static copyOf(source: PopularUrl, mutator: (draft: MutableModel<PopularUrl, PopularUrlMetaData>) => MutableModel<PopularUrl, PopularUrlMetaData> | void): PopularUrl;
-}
-
-export declare class TestPopularItemType {
-  readonly id: string;
-  readonly popularType?: string;
-  readonly popularTypeLogo?: string;
-  readonly popularUrls?: (TestPopularUrl | null)[];
-  readonly type: string;
-  readonly createdAt?: string;
-  readonly updatedAt?: string;
-  constructor(init: ModelInit<TestPopularItemType, TestPopularItemTypeMetaData>);
-  static copyOf(source: TestPopularItemType, mutator: (draft: MutableModel<TestPopularItemType, TestPopularItemTypeMetaData>) => MutableModel<TestPopularItemType, TestPopularItemTypeMetaData> | void): TestPopularItemType;
-}
-
-export declare class TestPopularUrl {
-  readonly id: string;
-  readonly url?: string;
-  readonly urlName?: string;
-  readonly popularItemTypeID: string;
-  readonly type: string;
-  readonly createdAt?: string;
-  readonly updatedAt?: string;
-  constructor(init: ModelInit<TestPopularUrl, TestPopularUrlMetaData>);
-  static copyOf(source: TestPopularUrl, mutator: (draft: MutableModel<TestPopularUrl, TestPopularUrlMetaData>) => MutableModel<TestPopularUrl, TestPopularUrlMetaData> | void): TestPopularUrl;
 }
 
 export declare class FAQType {
@@ -171,4 +143,18 @@ export declare class Resource {
   readonly updatedAt?: string;
   constructor(init: ModelInit<Resource, ResourceMetaData>);
   static copyOf(source: Resource, mutator: (draft: MutableModel<Resource, ResourceMetaData>) => MutableModel<Resource, ResourceMetaData> | void): Resource;
+}
+
+export declare class SupportRequestForm {
+  readonly id: string;
+  readonly lname?: string;
+  readonly fname?: string;
+  readonly email?: string;
+  readonly phone?: string;
+  readonly message?: string;
+  readonly attachment?: string;
+  readonly createdAt?: string;
+  readonly updatedAt?: string;
+  constructor(init: ModelInit<SupportRequestForm, SupportRequestFormMetaData>);
+  static copyOf(source: SupportRequestForm, mutator: (draft: MutableModel<SupportRequestForm, SupportRequestFormMetaData>) => MutableModel<SupportRequestForm, SupportRequestFormMetaData> | void): SupportRequestForm;
 }

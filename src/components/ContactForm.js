@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './ContactForm.module.css'
 import Amplify, { API, graphqlOperation } from "aws-amplify";
 import awsmobile from "../aws-exports";
-import {createSupportRequestForm, updateSupportRequestForm} from '../graphql/mutations';
+import {createSupportRequestForm} from '../graphql/mutations';
 
 Amplify.configure(awsmobile);
 

@@ -22,10 +22,5 @@
       }
     }
   },
-  "storage": {
-    "supportContactForm": {
-      "service": "DynamoDB",
-      "providerPlugin": "awscloudformation"
-    }
-  }
+  "storage": {}
 }
